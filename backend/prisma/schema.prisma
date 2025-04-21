@@ -6,23 +6,23 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  id              String    @id @default(uuid())
   email           String    @unique
   password        String
   firstName       String
   lastName        String
   role            Role      @default(EMPLOYEE)
-  organizationId  String    @db.ObjectId
+  organizationId  String
   organization    Organization @relation(fields: [organizationId], references: [id])
-  managerId       String?   @db.ObjectId
+  managerId       String?
   manager         User?     @relation("ManagerToEmployee", fields: [managerId], references: [id], onDelete: NoAction, onUpdate: NoAction)
   employees       User[]    @relation("ManagerToEmployee")
-  teamId          String?   @db.ObjectId
+  teamId          String?
   team            Team?     @relation(fields: [teamId], references: [id])
   createdLeaves   Leave[]   @relation("UserToLeave")
   approverLeaves  Leave[]   @relation("ApproverToLeave")
@@ -31,7 +31,7 @@ model User {
 }
 
 model Organization {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  id          String    @id @default(uuid())
   name        String
   users       User[]
   teams       Team[]
@@ -40,10 +40,10 @@ model Organization {
 }
 
 model Team {
-  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  id              String    @id @default(uuid())
   name            String
   description     String?
-  organizationId  String    @db.ObjectId
+  organizationId  String
   organization    Organization @relation(fields: [organizationId], references: [id])
   members         User[]
   createdAt       DateTime  @default(now())
@@ -51,10 +51,10 @@ model Team {
 }
 
 model Leave {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
-  userId      String    @db.ObjectId
+  id          String    @id @default(uuid())
+  userId      String
   user        User      @relation("UserToLeave", fields: [userId], references: [id])
-  approverId  String?   @db.ObjectId
+  approverId  String?
   approver    User?     @relation("ApproverToLeave", fields: [approverId], references: [id])
   startDate   DateTime
   endDate     DateTime
@@ -62,7 +62,7 @@ model Leave {
   reason      String?
   comment     String?
   status      LeaveStatus @default(PENDING)
-  reviewedBy  String?   @db.ObjectId
+  reviewedBy  String?
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }

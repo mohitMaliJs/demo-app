@@ -69,7 +69,7 @@ PORT=12001
 **Frontend (.env.local)**
 ```
 NEXT_PUBLIC_API_URL=http://localhost:12001
-NEXTAUTH_URL=http://localhost:12000
+NEXTAUTH_URL=http://localhost:8080
 NEXTAUTH_SECRET=your-nextauth-secret
 ```
 
@@ -100,7 +100,7 @@ npm run dev
 ```
 
 3. Access the application:
-   - Frontend: http://localhost:12000
+   - Frontend: http://localhost:8080
    - Backend API: http://localhost:12001
    - API Documentation: http://localhost:12001/api
 

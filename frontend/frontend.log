@@ -1,0 +1,61 @@
+
+> frontend@0.1.0 dev
+> next dev --port 8080 --hostname 0.0.0.0
+
+   ▲ Next.js 15.3.1
+   - Local:        http://localhost:8080
+   - Network:      http://0.0.0.0:8080
+   - Environments: .env.local
+
+ ✓ Starting...
+ ⚠ Invalid next.config.ts options detected: 
+ ⚠     Unrecognized key(s) in object: 'swcMinify'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ ✓ Ready in 1540ms
+ ○ Compiling / ...
+ ⨯ ./app/layout.   Reload env: .env.local
+Can't resolve './globals.css'
+  1 | import type { Metadata } from 'next';
+  2 | import { Inter } from 'next/font/google';
+> 3 | import './globals.css';
+    | ^
+  4 | import { Toaster } from '@/compon   Reload env: .env.local
+port { AuthProvider } from '@/components/auth/auth-provider';
+  6 |
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./app/layout.tsx:3:1
+Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from 'next';
+  2 | import { Inter } from 'next/font/google';
+> 3 | import './globals.css';
+    | ^
+  4 | import { Toaster } from '@/components/ui/toaster';
+  5 | import { AuthProvider } from '@/components/auth/auth-provider';
+  6 |
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./app/layout.tsx:3:1
+Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from 'next';
+  2 | import { Inter } from 'next/font/google';
+> 3 | import './globals.css';
+    | ^
+  4 | import { Toaster } from '@/components/ui/toaster';
+  5 | import { AuthProvider } from '@/components/auth/auth-provider';
+  6 |
+
+https://nextjs.org/docs/messages/module-not-found
+ GET / 500 in 8186ms
+   Reload env: .env.local
+ ⨯ ./app/layout.tsx:3:1
+Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from 'next';
+  2 | import { Inter } from 'next/font/google';
+> 3 | import './globals.css';
+    | ^
+  4 | import { Toaster } from '@/components/ui/toaster';
+  5 | import { AuthProvider } from '@/components/auth/auth-provider';
+  6 |
+
+https://nextjs.org/docs/messages/module-not-found
