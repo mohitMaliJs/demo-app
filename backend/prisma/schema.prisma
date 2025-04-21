@@ -1,0 +1,87 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  email           String    @unique
+  password        String
+  firstName       String
+  lastName        String
+  role            Role      @default(EMPLOYEE)
+  organizationId  String    @db.ObjectId
+  organization    Organization @relation(fields: [organizationId], references: [id])
+  managerId       String?   @db.ObjectId
+  manager         User?     @relation("ManagerToEmployee", fields: [managerId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  employees       User[]    @relation("ManagerToEmployee")
+  teamId          String?   @db.ObjectId
+  team            Team?     @relation(fields: [teamId], references: [id])
+  createdLeaves   Leave[]   @relation("UserToLeave")
+  approverLeaves  Leave[]   @relation("ApproverToLeave")
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Organization {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  users       User[]
+  teams       Team[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Team {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  name            String
+  description     String?
+  organizationId  String    @db.ObjectId
+  organization    Organization @relation(fields: [organizationId], references: [id])
+  members         User[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Leave {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String    @db.ObjectId
+  user        User      @relation("UserToLeave", fields: [userId], references: [id])
+  approverId  String?   @db.ObjectId
+  approver    User?     @relation("ApproverToLeave", fields: [approverId], references: [id])
+  startDate   DateTime
+  endDate     DateTime
+  type        LeaveType
+  reason      String?
+  comment     String?
+  status      LeaveStatus @default(PENDING)
+  reviewedBy  String?   @db.ObjectId
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  EMPLOYEE
+}
+
+enum LeaveType {
+  ANNUAL
+  SICK
+  PERSONAL
+  OTHER
+}
+
+enum LeaveStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
