@@ -21,3 +21,25 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  ✓ Compiled /login in 872ms (825 modules)
  GET /login 200 in 1185ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 1804ms (1174 modules)
+ GET /api/auth/providers 200 in 3044ms
+ GET /api/auth/csrf 200 in 32ms
+Authentication error: Error [AxiosError]: Request failed with status code 401
+    at async Object.authorize (app/api/auth/[...nextauth]/route.ts:19:27)
+  17 |
+  18 |         try {
+> 19 |           const response = await axios.post(
+     |                           ^
+  20 |             `${process.env.NEXT_PUBLIC_API_URL}/auth/login`,
+  21 |             {
+  22 |               email: credentials.email, {
+  code: 'ERR_BAD_REQUEST',
+  config: [Object],
+  request: [ClientRequest],
+  response: [Object],
+  status: 401,
+  constructor: [Function],
+  toJSON: [Function: toJSON]
+}
+ POST /api/auth/callback/credentials 401 in 271ms
