@@ -15,9 +15,7 @@ const nextConfig: NextConfig = {
     ],
   },
   // Server configuration for external packages
-  experimental: {
-    serverComponentsExternalPackages: ['bcrypt'],
-  },
+  serverExternalPackages: ['bcrypt'],
   // Combined headers for CORS and iframe embedding
   async headers() {
     return [
