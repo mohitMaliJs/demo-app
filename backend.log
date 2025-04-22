@@ -1,0 +1,49 @@
+
+> backend@0.0.1 start:dev
+> nest start --watch
+
+[2J[3J[H[[90m6:57:56 AM[0m] Starting compilation in watch mode...
+
+[[90m6:58:00 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +19ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTeamsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mLeavesModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +39ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register-org, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register-employee, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/assign-manager, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/assign-team, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/team/:teamId/members, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/manager/:managerId/employees, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mTeamsController {/teams}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/teams, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/teams, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/teams/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/teams/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/teams/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mLeavesController {/leaves}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/leaves, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/leaves, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/leaves/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/leaves/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/leaves/:id/status, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/leaves/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33420  - [39m04/22/2025, 6:58:01 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +13ms[39m
+Application is running on: http://0.0.0.0:12001

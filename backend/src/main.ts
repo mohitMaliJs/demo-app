@@ -8,7 +8,7 @@ async function bootstrap() {
   
   // Enable CORS
   app.enableCors({
-    origin: true,
+    origin: ['https://work-1-jwxyjnjsfwdpnruc.prod-runtime.all-hands.dev', 'http://localhost:12000'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });
@@ -33,8 +33,8 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
   
   // Start the server
-  const port = process.env.PORT || 4001; // Use the port from runtime information
+  const port = 12001; // Use the port from runtime information
   await app.listen(port, '0.0.0.0');
-  console.log(`Application is running on: http://localhost:${port}`);
+  console.log(`Application is running on: http://0.0.0.0:${port}`);
 }
 bootstrap();

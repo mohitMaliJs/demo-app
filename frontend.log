@@ -1,0 +1,23 @@
+
+> frontend@0.1.0 dev
+> next dev --port 12000 --hostname 0.0.0.0
+
+   ▲ Next.js 15.3.1
+   - Local:        http://localhost:12000
+   - Network:      http://0.0.0.0:12000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1804ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1182ms (657 modules)
+ GET / 200 in 1498ms
+ GET / 200 in 53ms
+ GET / 200 in 47ms
+ GET / 200 in 36ms
+ ⚠ Cross origin request detected from work-1-jwxyjnjsfwdpnruc.prod-runtime.all-hands.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ○ Compiling /login ...
+ ✓ Compiled /login in 872ms (825 modules)
+ GET /login 200 in 1185ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
