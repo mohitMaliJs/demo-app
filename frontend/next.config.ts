@@ -3,10 +3,21 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['avatars.githubusercontent.com', 'lh3.googleusercontent.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+    ],
   },
-  // Server configuration
-  serverExternalPackages: ['bcrypt'],
+  // Server configuration for external packages
+  experimental: {
+    serverComponentsExternalPackages: ['bcrypt'],
+  },
   // Combined headers for CORS and iframe embedding
   async headers() {
     return [
@@ -26,6 +37,10 @@ const nextConfig: NextConfig = {
             value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization',
           },
           {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'self' *",
+          },
+          {
             key: 'X-Frame-Options',
             value: 'ALLOWALL',
           },
@@ -33,9 +48,8 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  webpack: (config) => {
-    return config;
-  },
+  // Allow embedding in iframes from any origin
+  allowedDevOrigins: ['*'],
 };
 
 export default nextConfig;
