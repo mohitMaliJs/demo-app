@@ -14,16 +14,13 @@
  ✓ Ready in 1540ms
  ○ Compiling / ...
  ⨯ ./app/layout.   Reload env: .env.local
-Can't resolve './globals.css'
-  1 | import type { Metadata } from 'next';
-  2 | import { Inter } from 'next/font/google';
+ ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+t { Inter } from 'next/font/google';
 > 3 | import './globals.css';
     | ^
   4 | import { Toaster } from '@/compon   Reload env: .env.local
-port { AuthProvider } from '@/components/auth/auth-provider';
-  6 |
-
-https://nextjs.org/docs/messages/module-not-found
+ ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+rg/docs/messages/module-not-found
  ⨯ ./app/layout.tsx:3:1
 Module not found: Can't resolve './globals.css'
   1 | import type { Metadata } from 'next';
@@ -59,3 +56,6 @@ Module not found: Can't resolve './globals.css'
   6 |
 
 https://nextjs.org/docs/messages/module-not-found
+Killed
+ ✓ Compiled /_error in 316ms (54 modules)
+ ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
