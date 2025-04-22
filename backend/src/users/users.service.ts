@@ -81,8 +81,12 @@ export class UsersService {
       where: { id: currentUserId },
     });
 
-    if (id !== currentUserId && currentUser?.role !== Role.ADMIN) {
+    if (id !== currentUserId && currentUser && currentUser.role !== Role.ADMIN) {
       throw new BadRequestException('You do not have permission to update this user');
+    }
+    
+    if (!currentUser) {
+      throw new NotFoundException(`Current user with ID ${currentUserId} not found`);
     }
 
     // If changing role to MANAGER, ensure the user is not already a manager
