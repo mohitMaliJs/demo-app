@@ -47,7 +47,9 @@ const nextConfig: NextConfig = {
     ];
   },
   // Allow embedding in iframes from any origin
-  allowedDevOrigins: ['*'],
+  experimental: {
+    allowedDevOrigins: ['work-1-jwxyjnjsfwdpnruc.prod-runtime.all-hands.dev'],
+  },
 };
 
 export default nextConfig;
